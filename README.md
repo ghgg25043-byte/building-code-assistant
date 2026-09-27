@@ -4,7 +4,21 @@
 
 **[立即在线试用虚构资料演示](https://ghgg25043-byte.github.io/building-code-assistant/)**：输入“办公楼公共走廊净宽和消防疏散距离有哪些要求？”，可看到虚构候选 D-11 与未覆盖的消防专题。在线演示只在浏览器中运行，不上传问题，也不调用模型。
 
-[静态流程导览](https://ghgg25043-byte.github.io/building-code-assistant/walkthrough.html) · [演示场景](docs/demo.md) · [产品案例](docs/case-study.md) · [评测说明](docs/evaluation.md) · [资料与权益边界](docs/data-sources.md) · [合规状态](COMPLIANCE_STATUS.md)
+[新手图解](docs/quickstart.md) · [静态流程导览](https://ghgg25043-byte.github.io/building-code-assistant/walkthrough.html) · [演示场景](docs/demo.md) · [产品案例](docs/case-study.md) · [评测说明](docs/evaluation.md) · [资料与权益边界](docs/data-sources.md) · [合规状态](COMPLIANCE_STATUS.md)
+
+## 第一次使用：先走这条路线
+
+```mermaid
+flowchart TD
+    A["打开在线演示"] --> B["点选页面中的三个练习示例"]
+    B --> C["对照右侧结果：候选 / 部分覆盖 / 资料不足"]
+    C --> D{"需要留下人工研读记录？"}
+    D -->|不需要| E["查看虚构资料与产品案例"]
+    D -->|需要| F["本地运行 python app.py"]
+    F --> G["填写练习备注并导出工作簿"]
+```
+
+先在[在线演示](https://ghgg25043-byte.github.io/building-code-assistant/)依次点击三个示例，观察 D-11 候选、未覆盖专题提示和 0 候选；网页不会保存你的练习问题。需要记录理由与交接状态时，再按下方步骤运行本地版。每一步的页面位置和结果含义见[新手图解](docs/quickstart.md)。
 
 ## 本地运行
 
