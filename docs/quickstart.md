@@ -11,6 +11,10 @@ flowchart LR
     A["① 左侧：点示例或输入练习问题"] --> B["② 点击检索虚构条目"]
     B --> C["③ 右侧：先看结果状态与候选数量"]
     C --> D["④ 再看 D 编号、命中原因或资料缺口"]
+    classDef start fill:#143B32,stroke:#C8A77A,color:#FFFFFF,stroke-width:2px
+    classDef step fill:#EAF1E9,stroke:#9BBBA3,color:#19342E
+    class A start
+    class B,C,D step
 ```
 
 页面只在浏览器内检索 14 个虚构条目，不保存练习问题。不要输入客户资料、真实图纸或个人敏感信息。
@@ -26,6 +30,12 @@ flowchart TD
     A --> H["如需真实项目判断，另查有权使用的正式资料并由专业人员核验"]
     B --> H
     C --> H
+    classDef start fill:#143B32,stroke:#C8A77A,color:#FFFFFF,stroke-width:2px
+    classDef choice fill:#F7EEDC,stroke:#B58A55,color:#4A3A26,stroke-width:2px
+    classDef step fill:#EAF1E9,stroke:#9BBBA3,color:#19342E
+    class Q start
+    class S choice
+    class A,B,C,H step
 ```
 
 按页面三个按钮依次试一次：

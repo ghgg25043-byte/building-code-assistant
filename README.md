@@ -16,9 +16,15 @@ flowchart TD
     D -->|不需要| E["查看虚构资料与产品案例"]
     D -->|需要| F["本地运行 python app.py"]
     F --> G["填写练习备注并导出工作簿"]
+    classDef start fill:#143B32,stroke:#C8A77A,color:#FFFFFF,stroke-width:2px
+    classDef step fill:#EAF1E9,stroke:#9BBBA3,color:#19342E
+    classDef choice fill:#F7EEDC,stroke:#B58A55,color:#4A3A26,stroke-width:2px
+    class A start
+    class B,C,E,F,G step
+    class D choice
 ```
 
-先在[在线演示](https://ghgg25043-byte.github.io/building-code-assistant/)依次点击三个示例，观察 D-11 候选、未覆盖专题提示和 0 候选；网页不会保存你的练习问题。需要记录理由与交接状态时，再按下方步骤运行本地版。每一步的页面位置和结果含义见[新手图解](docs/quickstart.md)。
+想看带动效的版本，可打开[在线演示](https://ghgg25043-byte.github.io/building-code-assistant/)，依次点击三个示例，观察 D-11 候选、未覆盖专题提示和 0 候选；网页不会保存你的练习问题。需要记录理由与交接状态时，再按下方步骤运行本地版。每一步的页面位置和结果含义见[新手图解](docs/quickstart.md)。
 
 ## 本地运行
 
