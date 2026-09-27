@@ -20,8 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Scope notice: This license covers the project's original software and
-documentation. It does not grant rights to third-party standards, source
-documents, or material derived from them in data/clauses.json. See
-docs/data-sources.md for the dataset's provenance, review status, and rights
-limitations. Linking to a source does not grant permission to redistribute it.
+Scope notice: This license covers the project's original software,
+documentation, and fictional demonstration dataset. It does not grant rights
+to any third-party standards or source documents. See docs/data-sources.md
+for the demonstration dataset's provenance and use limitations.
