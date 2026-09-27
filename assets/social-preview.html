@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1280">
+  <title>建筑场景检索助手 · 社交预览图源文件</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1280px; height: 640px; margin: 0; overflow: hidden; }
+    body {
+      color: #f4f4eb;
+      font-family: "Microsoft YaHei UI", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      background:
+        radial-gradient(circle at 88% 12%, #315f4a 0, transparent 37%),
+        linear-gradient(135deg, #102f28, #173f34 64%, #24513d);
+    }
+    body::before {
+      content: ""; position: absolute; inset: 0; opacity: .2;
+      background-image: linear-gradient(#bed2bc 1px, transparent 1px), linear-gradient(90deg, #bed2bc 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: linear-gradient(90deg, transparent 25%, black 100%);
+    }
+    .frame { position: relative; display: flex; height: 100%; padding: 58px 58px 48px 66px; gap: 24px; }
+    .copy { width: 500px; flex: none; display: flex; flex-direction: column; }
+    .eyebrow { color: #d8b884; font: 700 17px Georgia, serif; letter-spacing: .16em; }
+    h1 { margin: 39px 0 18px; font-size: 55px; line-height: 1.23; letter-spacing: -.055em; }
+    .lead { margin: 0; color: #e3ebe0; font-size: 24px; line-height: 1.55; }
+    .steps { display: flex; align-items: center; gap: 9px; margin-top: 38px; color: #f6e9d2; font-size: 15px; font-weight: 700; }
+    .steps span { padding: 9px 12px; border: 1px solid #b7ba9a; background: #ffffff12; }
+    .steps b { color: #d8b884; font-size: 20px; }
+    .foot { margin-top: auto; padding-top: 24px; border-top: 1px solid #ffffff40; color: #cfded2; font-size: 15px; }
+    .preview { align-self: center; position: relative; width: 610px; height: 365px; overflow: hidden; border: 8px solid #e9eee7; background: #f5f7f3; box-shadow: 0 27px 65px #091d18a8; transform: rotate(-2deg); }
+    .preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .badge { position: absolute; right: 26px; bottom: 27px; padding: 11px 16px; background: #e3c294; color: #18362c; font-size: 16px; font-weight: 800; box-shadow: 0 9px 25px #10271b66; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="copy">
+      <div class="eyebrow">INTERACTIVE PRODUCT PROTOTYPE</div>
+      <h1>建筑场景<br>检索助手</h1>
+      <p class="lead">把候选线索与资料缺口<br>放在同一张工作台。</p>
+      <div class="steps"><span>输入问题</span><b>→</b><span>定位候选</span><b>→</b><span>标出缺口</span></div>
+      <div class="foot">原创虚构资料演示 · 不作为真实工程依据</div>
+    </div>
+    <div class="preview"><img src="product-workspace.png" alt="实际演示页中的输入与结果界面"></div>
+    <div class="badge">DEMO-ARCH-001</div>
+  </div>
+</body>
+</html>

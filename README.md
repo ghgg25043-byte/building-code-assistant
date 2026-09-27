@@ -4,6 +4,10 @@
 
 **[立即在线试用虚构资料演示](https://ghgg25043-byte.github.io/building-code-assistant/)**：输入“办公楼公共走廊净宽和消防疏散距离有哪些要求？”，可看到虚构候选 D-11 与未覆盖的消防专题。在线演示只在浏览器中运行，不上传问题，也不调用模型。
 
+![在线演示工作台截图：左侧输入公共走廊与消防疏散练习问题，右侧同时显示 D-11 虚构候选和未覆盖专题提示](assets/product-workspace.png)
+
+*页面实拍：候选线索与资料缺口同时呈现。图中所有条目均为本项目原创虚构练习资料。*
+
 [新手图解](docs/quickstart.md) · [静态流程导览](https://ghgg25043-byte.github.io/building-code-assistant/walkthrough.html) · [演示场景](docs/demo.md) · [产品案例](docs/case-study.md) · [评测说明](docs/evaluation.md) · [资料与权益边界](docs/data-sources.md) · [合规状态](COMPLIANCE_STATUS.md)
 
 ## 第一次使用：先走这条路线
