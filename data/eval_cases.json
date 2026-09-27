@@ -1,0 +1,17 @@
+{
+  "description": "开发者依据14个原创虚构练习条目编写的回归样本；仅用于检测软件行为，不代表真实建筑专业准确率。",
+  "cases": [
+    {"question": "办公楼公共走廊的净宽要求在哪里查", "expected_articles": ["D-11"]},
+    {"question": "主入口室外台阶踏步宽高", "expected_articles": ["D-08"]},
+    {"question": "屋顶设备用房是否计入建筑高度", "expected_articles": ["D-04"]},
+    {"question": "楼梯休息平台宽度怎么定", "expected_articles": ["D-10"]},
+    {"question": "机动车出入口靠近学校", "expected_articles": ["D-06"]},
+    {"question": "屋面坡度排水要求", "expected_articles": ["D-13"], "forbidden_articles": ["D-03"]},
+    {"question": "办公楼走道净宽", "expected_articles": ["D-11"], "forbidden_articles": ["D-05"]},
+    {"question": "室内净空高度最低要求", "expected_articles": ["D-05"]},
+    {"question": "住宅公共走廊净宽要求", "expected_articles": [], "expect_no_evidence": true},
+    {"question": "消防疏散距离是多少", "expected_articles": [], "expect_no_evidence": true},
+    {"question": "物业费多少钱", "expected_articles": [], "expect_no_evidence": true},
+    {"question": "住宅公共走廊净宽要求", "context": {"building_use": "non_residential"}, "expected_articles": [], "expect_no_evidence": true}
+  ]
+}

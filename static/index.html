@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="使用原创虚构资料演示建筑场景检索与人工研读流程">
+  <title>建筑规范检索助手</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b3332'/%3E%3Cpath d='M15 45V17h34v28M23 25h18M23 33h18M23 41h12' fill='none' stroke='%23c9ad79' stroke-width='3' stroke-linecap='square'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>规</span></div>
+        <div>
+          <div class="brand-title">建筑规范检索助手</div>
+          <div class="brand-subtitle">ARCHITECTURAL CODE ASSISTANT</div>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span class="edition">LOCAL / 01</span>
+        <span class="header-state" id="model-state">正在检查连接</span>
+      </div>
+    </div>
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <div class="hero-kicker"><span class="kicker-line"></span> 原创虚构资料 · 产品流程演示</div>
+        <h1>让检索过程<span>清晰可循。</span></h1>
+        <p>用完全虚构的建筑场景条目，体验候选定位、条件记录与人工交接。所有条目均无工程效力。</p>
+        <div class="hero-points" aria-label="产品能力">
+          <span><i aria-hidden="true"></i>依据可追溯</span>
+          <span><i aria-hidden="true"></i>条件可核验</span>
+          <span><i aria-hidden="true"></i>过程可留痕</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="plan-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+              <path d="M24 0H0V24" fill="none" stroke="#78908a" stroke-opacity=".16" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect x="0" y="0" width="520" height="260" fill="url(#plan-grid)"/>
+          <g fill="none" stroke="#92aaa2" stroke-opacity=".55" stroke-width="1.2">
+            <path d="M86 210V87h87V53h188v157"/>
+            <path d="M114 210V111h85V78h134v132"/>
+            <path d="M86 124h27M86 164h27M86 203h27M200 111h134M200 151h134M200 190h134"/>
+            <path d="M173 53v158M361 53v158"/>
+            <path d="M60 210h327M225 78v112M269 78v112M311 78v112"/>
+          </g>
+          <g fill="none" stroke="#c9ad79" stroke-width="1.6">
+            <path d="M172 53h190M172 53v60M361 53v58M86 211h276"/>
+            <circle cx="200" cy="151" r="4" fill="#c9ad79"/>
+            <path d="M200 151L391 104h67M361 53l25-22h72"/>
+          </g>
+          <g fill="#d4c3a3" font-family="Georgia,serif" font-size="11" letter-spacing="2">
+            <text x="398" y="99">D-11</text>
+            <text x="390" y="27">SECTION / A</text>
+            <text x="54" y="229">ELEVATION 01</text>
+          </g>
+          <g fill="none" stroke="#d4c3a3" stroke-opacity=".55" stroke-width="1">
+            <path d="M410 128v81M406 128h8M406 209h8"/>
+            <path d="M86 239h275M86 235v8M361 235v8"/>
+          </g>
+        </svg>
+        <div class="art-caption">FIG. 01 <span>SPACE / EVIDENCE</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap app-layout">
+    <section class="query-panel" aria-labelledby="query-title">
+      <div class="panel-topline"><span>01 / 检索输入</span><span>QUERY</span></div>
+      <div class="eyebrow">先描述场景，再定位依据</div>
+      <h2 id="query-title">你的设计问题</h2>
+      <p class="intro">描述设计场景，填写已知条件；检索后逐条核对来源。</p>
+      <details class="examples">
+        <summary>第一次使用？体验 3 个场景 <span>DEMO</span></summary>
+        <p>虚构练习，仅观察检索状态。建议先新建“演示项目”；按钮只填入问题，保留现有项目条件。</p>
+        <div class="example-options" aria-label="演示问题">
+          <button type="button" data-example="办公楼公共走廊的净宽要求在哪里查？" data-demo-label="候选定位"><span class="example-number">01</span><span><strong>候选定位</strong><small>从走廊净宽问题找到虚构条目</small></span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-example="办公楼公共走廊净宽和消防疏散距离有哪些要求？" data-demo-label="部分覆盖"><span class="example-number">02</span><span><strong>部分覆盖</strong><small>区分可定位依据与未覆盖专题</small></span><span aria-hidden="true">↗</span></button>
+          <button type="button" data-example="办公楼消防疏散距离要求是多少？" data-demo-label="资料不足"><span class="example-number">03</span><span><strong>资料不足</strong><small>查看没有候选依据时的下一步</small></span><span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="example-footnote">预期状态以条件未填写为前提；示例与候选条目均不代表合规结论。</p>
+      </details>
+      <div id="example-notice" class="example-notice" role="status" aria-live="polite" hidden></div>
+      <section class="workbook-box" aria-labelledby="workbook-title">
+        <div class="box-heading"><span class="box-icon" aria-hidden="true">▣</span><strong id="workbook-title">项目工作簿</strong></div>
+        <p>同一项目的多个问题保存在此浏览器。请定期导出工作簿备份；共享设备上不要填写涉密项目资料。</p>
+        <label for="project-select">选择项目</label>
+        <select id="project-select" aria-label="选择项目工作簿"></select>
+        <label for="project-name">项目名称</label>
+        <input id="project-name" maxlength="80" placeholder="例如：办公楼试点项目">
+        <div class="workbook-buttons">
+          <button type="button" id="new-project">新建项目</button>
+          <button type="button" id="export-workbook">导出项目记录 ↗</button>
+          <button type="button" id="delete-project">删除当前项目</button>
+          <button type="button" id="clear-all-records">清空全部本地记录</button>
+        </div>
+        <div id="workbook-status" class="workbook-status" role="status"></div>
+        <div id="issue-list" class="issue-list" aria-label="当前项目的问题记录"></div>
+      </section>
+      <form id="search-form">
+        <label for="issue-ref">图纸或问题编号 <span class="optional">选填，方便回到项目位置</span></label>
+        <input id="issue-ref" name="issue_ref" maxlength="80" placeholder="例如：A-12 / 2层公共走廊">
+        <label for="question">设计问题</label>
+        <textarea id="question" name="question" rows="3" maxlength="300" required placeholder="例如：办公楼公共走廊的净宽要求在哪里查？">办公楼公共走廊的净宽要求在哪里查？</textarea>
+        <label for="city">项目所在地 <span class="optional">仅记录，不参与自动判断</span></label>
+        <input id="city" name="city" type="text" maxlength="60" placeholder="例如：上海市">
+        <div class="field-grid">
+          <div>
+            <label for="building-use">建筑用途 <span class="optional">仅做标签初筛</span></label>
+            <select id="building-use" name="building_use">
+              <option value="">尚不确定</option>
+              <option value="non_residential">非住宅民用建筑</option>
+              <option value="residential">住宅</option>
+              <option value="other_civil">其他民用建筑</option>
+            </select>
+          </div>
+          <div>
+            <label for="project-kind">项目类型 <span class="optional">仅记录</span></label>
+            <select id="project-kind" name="project_kind">
+              <option value="">尚不确定</option>
+              <option value="new">新建</option>
+              <option value="renovation">改造</option>
+            </select>
+          </div>
+          <div>
+            <label for="design-stage">设计阶段 <span class="optional">仅记录</span></label>
+            <select id="design-stage" name="design_stage">
+              <option value="">尚不确定</option>
+              <option value="concept">前期研究</option>
+              <option value="scheme">方案设计</option>
+              <option value="construction">施工图设计</option>
+            </select>
+          </div>
+        </div>
+        <label class="model-consent" for="use-model"><input id="use-model" type="checkbox"> 本次允许把问题、所填项目条件及最多 3 条候选主题发给本机配置的模型服务，生成受限的条号提示</label>
+        <p class="model-consent-note">默认关闭，每次检索后自动取消。<span id="model-provider">正在检查模型配置…</span> 不要输入客户、图纸或个人敏感信息；服务商的数据处理以其条款为准。</p>
+        <button class="search-button" type="submit" id="search-button"><span>检索相关条文</span><span aria-hidden="true">↗</span></button>
+      </form>
+      <div class="scope-box">
+        <div class="box-heading"><span class="box-icon" aria-hidden="true">◇</span><strong>当前收录范围</strong></div>
+        <p>当前仅有 14 个本项目原创虚构条目（DEMO-ARCH-001，D-01 至 D-14）。它们不对应任何真实规范、标准或工程要求，也不能用于项目设计、审查或合规判断。真实项目须另行取得有权使用的现行正式资料并由专业人员核验。</p>
+        <a href="https://github.com/ghgg25043-byte/building-code-assistant/blob/main/data/demo-source.md" target="_blank" rel="noopener noreferrer">查看原创虚构资料 ↗</a>
+      </div>
+      <div class="quality-box" id="quality-box" role="status" aria-live="polite">
+        <strong>资料与评测状态</strong>
+        <p>正在读取…</p>
+      </div>
+    </section>
+
+    <section class="results-panel" aria-labelledby="results-title">
+      <div class="panel-topline"><span>02 / 依据研读</span><span>EVIDENCE</span></div>
+      <div class="results-head">
+        <div>
+          <div class="eyebrow">带着条件查看虚构条目</div>
+          <h2 id="results-title">候选依据</h2>
+        </div>
+        <span id="result-count" class="result-count">等待检索</span>
+      </div>
+      <div class="first-use-path" aria-label="首次使用流程">
+        <ol><li><span>01</span>提问</li><li><span>02</span>核对来源</li><li><span>03</span>自动保存</li><li><span>04</span>导出记录</li></ol>
+        <p>检索成功后保存到当前项目；填写研读理由后，可预览或导出 Markdown。记录仅保存在此浏览器。</p>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite">输入问题，开始检索候选依据。</div>
+      <div id="change-notice" class="change-notice" role="status" hidden></div>
+      <div id="search-explanation" class="search-explanation" hidden></div>
+      <div id="assessment" class="assessment" hidden></div>
+      <div id="result-list" class="result-list"></div>
+      <div id="city-note" class="city-note" hidden></div>
+      <div id="ai-note" class="ai-note" hidden></div>
+      <div class="record-actions">
+        <div class="record-heading">
+          <strong>项目研读记录</strong>
+          <span>候选依据和理由按项目保存；“列入待核对”不代表条文资料已复核或项目合规。</span>
+        </div>
+        <label class="reviewer-field" for="reviewer">研读人 <span class="optional">选填，写入导出记录</span>
+          <input id="reviewer" type="text" maxlength="60" placeholder="填写姓名或团队角色">
+        </label>
+        <div class="handoff-grid">
+          <label for="review-status">交接状态
+            <select id="review-status">
+              <option value="draft">研读草稿</option>
+              <option value="ready">待负责人复核</option>
+              <option value="returned">退回补证据</option>
+              <option value="recorded">已记录人工复核</option>
+            </select>
+          </label>
+          <label for="reviewed-by">复核记录人 <span class="optional">手工填写</span>
+            <input id="reviewed-by" maxlength="60" placeholder="姓名或团队角色">
+          </label>
+        </div>
+        <label for="review-note">交接意见 <span class="optional">记录正式来源、版本及待核验项</span></label>
+        <textarea id="review-note" rows="2" maxlength="500" placeholder="例如：虚构练习中仍需补充使用场景；真实项目另查规范。"></textarea>
+        <div class="record-buttons">
+          <button type="button" id="preview-button" disabled>预览核验记录</button>
+          <button type="button" id="export-button" disabled>导出 Markdown ↗</button>
+        </div>
+      </div>
+      <details id="record-preview" class="record-preview" hidden>
+        <summary>核验记录内容</summary>
+        <pre id="record-content"></pre>
+      </details>
+      <div class="result-footer">本站仅演示虚构资料检索，不提供真实规范依据或项目合规结论。</div>
+    </section>
+  </main>
+</body>
+</html>

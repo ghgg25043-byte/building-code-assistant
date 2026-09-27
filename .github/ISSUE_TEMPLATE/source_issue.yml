@@ -1,0 +1,33 @@
+name: 规范资料、来源或版本问题
+description: 来源失效、摘录位置错误、版本变化、适用条件或使用权限问题
+title: "[Source] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请优先提供主管部门公开来源链接和定位信息。不要上传未获准公开的文件、规范全文或敏感项目资料。
+  - type: input
+    id: clause
+    attributes:
+      label: 涉及条目
+      description: 标准编号、版本、条号或来源名称
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 来源链接或页码
+        - 现行版本、修订或废止
+        - 摘要内容或适用条件
+        - 资料使用权限
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 问题和核对依据
+      description: 说明发现的问题、正式公开链接、定位方式和核对日期；区分已确认事实与推测
+    validations:
+      required: true

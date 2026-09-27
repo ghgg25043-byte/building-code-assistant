@@ -1,0 +1,35 @@
+name: 检索遗漏或排序反馈
+description: 候选条款不相关、遗漏、错误拒答或资料缺口提示不清楚
+title: "[Retrieval] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        当前资料仅为 14 个待专业复核的条号与主题索引。请用脱敏问题描述，不要上传图纸、客户资料或规范全文。
+        反馈将作为待核对线索；提交反馈不会直接把条目升级为已复核资料。
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题与必要条件
+      description: 原始提问、建筑用途和必要条件；省略项目地址及可识别信息
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 实际候选与预期差异
+      description: 列出返回的标准编号和条号，说明相关、遗漏或应拒答的原因
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: 可核对的依据
+      description: 如有，请提供正式公开来源链接、标准编号、条号和版本；不能确定时直接说明
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 发布版本或提交号；如有，附语料指纹
+    validations:
+      required: true

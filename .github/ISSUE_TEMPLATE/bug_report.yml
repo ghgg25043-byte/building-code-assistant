@@ -1,0 +1,34 @@
+name: 程序错误
+description: 页面、启动或导出等软件行为不符合预期
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请使用脱敏或虚构的最小复现示例。不要上传真实图纸、项目名称、客户信息、密钥或未获准公开的规范全文。
+  - type: input
+    id: environment
+    attributes:
+      label: 环境与版本
+      description: 系统、浏览器、Python 版本、发布版本或提交号
+      placeholder: Windows 11 / Chrome / Python 3.13 / 0.1.1-preview
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从启动或打开页面开始，说明操作和脱敏输入
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 可选错误信息或截图
+      description: 提交前检查终端输出和截图是否包含个人或项目资料

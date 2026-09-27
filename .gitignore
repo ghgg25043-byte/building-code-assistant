@@ -1,0 +1,32 @@
+# Local runtimes and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+node_modules/
+
+# Credentials and local configuration (the app reads process environment variables)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Private pilot records and exports: keep raw project data out of the repository
+private/
+exports/
+eval_runs/
+data/private/
+data/local/
+data/field_reviews_*.csv
+!data/field_reviews_blank.csv
+data/source_review_*.csv
+!data/source_review_blank.csv
+
+# Local packaging and operating-system files
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
