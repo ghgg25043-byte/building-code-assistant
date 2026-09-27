@@ -18,9 +18,9 @@ class LocalHtmlLinks(HTMLParser):
         self.targets: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        if tag not in {"a", "img"}:
+        if tag not in {"a", "img", "link", "script"}:
             return
-        wanted = "href" if tag == "a" else "src"
+        wanted = "href" if tag in {"a", "link"} else "src"
         self.targets.extend(value for name, value in attrs if name == wanted and value)
 
 

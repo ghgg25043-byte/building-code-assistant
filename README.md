@@ -2,11 +2,13 @@
 
 这是一个建筑场景检索与人工研读工作流原型。当前公开版只使用[本项目原创虚构练习资料](data/demo-source.md)：14 个 D 编号条目，资料标识 `DEMO-ARCH-001`。它不是任何真实标准，不包含第三方规范原文、数值或要求，也不能用于设计、审查或合规判断。
 
-[静态导览](https://ghgg25043-byte.github.io/building-code-assistant/) · [演示场景](docs/demo.md) · [评测说明](docs/evaluation.md) · [资料与权益边界](docs/data-sources.md) · [合规状态](COMPLIANCE_STATUS.md)
+**[立即在线试用虚构资料演示](https://ghgg25043-byte.github.io/building-code-assistant/)**：输入“办公楼公共走廊净宽和消防疏散距离有哪些要求？”，可看到虚构候选 D-11 与未覆盖的消防专题。在线演示只在浏览器中运行，不上传问题，也不调用模型。
+
+[静态流程导览](https://ghgg25043-byte.github.io/building-code-assistant/walkthrough.html) · [演示场景](docs/demo.md) · [产品案例](docs/case-study.md) · [评测说明](docs/evaluation.md) · [资料与权益边界](docs/data-sources.md) · [合规状态](COMPLIANCE_STATUS.md)
 
 ## 本地运行
 
-需要 Python 3.11 或更新版本，不需要安装第三方包。克隆仓库后在项目目录运行：
+需要 Python 3.10 或更新版本，不需要安装第三方包。克隆仓库后在项目目录运行：
 
 ```bash
 python app.py
@@ -20,6 +22,8 @@ python app.py
 python -m unittest discover -s tests -v
 python evaluate.py
 node tests/frontend_smoke.js
+python scripts/build_pages_demo.py --check
+node tests/pages_demo.js
 ```
 
 开发者回归样本仅验证程序行为，不代表建筑专业准确率。可选模型接口默认关闭，只有使用者在单次检索中主动勾选才发送问题、项目条件与最多 3 条虚构候选主题；请勿输入客户或敏感资料。

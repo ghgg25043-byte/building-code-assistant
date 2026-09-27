@@ -10,7 +10,7 @@ from zipfile import ZIP_DEFLATED, ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_FILES = {
     ".gitignore", ".gitattributes", "LICENSE", "README.md", "CHANGELOG.md", "CONTRIBUTING.md",
-    "COMPLIANCE_STATUS.md",
+    "COMPLIANCE_STATUS.md", "SECURITY.md",
     "PILOT_PLAN.md", "start.bat", "app.py", "search_engine.py", "quality.py",
     "evaluate.py", "expert_eval.py", "source_review.py",
 }
@@ -21,7 +21,7 @@ DATA_FILES = {
 OTHER_EXTENSIONS = {
     "static": {".html", ".css", ".js"},
     "tests": {".py", ".js"},
-    "docs": {".md", ".html"},
+    "docs": {".md", ".html", ".css", ".js", ".json"},
     ".github": {".yml", ".yaml", ".md"},
     "scripts": {".py"},
 }

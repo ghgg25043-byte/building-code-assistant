@@ -1,0 +1,200 @@
+{
+  "dataset_id": "fictional_architecture_demo_v1",
+  "scope": "本资料集完全虚构，仅用于检索流程演示；不对应任何真实建筑规范、标准或工程要求。",
+  "synonyms": {
+    "公共走廊": [
+      "公共走道",
+      "办公楼走道",
+      "走道净宽"
+    ],
+    "室内净高": [
+      "净空高度",
+      "室内净空"
+    ],
+    "楼梯休息平台": [
+      "楼梯平台",
+      "转角平台"
+    ],
+    "屋面坡度": [
+      "屋面坡比",
+      "屋顶排水坡度"
+    ],
+    "机动车出入口": [
+      "车行出入口",
+      "车辆出入口"
+    ]
+  },
+  "unsupported_topics": [
+    {
+      "label": "真实消防与安全疏散规范要求",
+      "terms": [
+        "消防",
+        "防火",
+        "疏散距离",
+        "耐火等级",
+        "防烟楼梯",
+        "消防车道"
+      ]
+    }
+  ],
+  "source": {
+    "name": "本项目原创虚构练习资料",
+    "url": "https://github.com/ghgg25043-byte/building-code-assistant/blob/main/data/demo-source.md",
+    "type": "fictional_demo",
+    "standard": "DEMO-ARCH-001"
+  },
+  "clauses": [
+    {
+      "article": "D-01",
+      "topic": "建筑场景登记",
+      "keywords": [
+        "民用建筑",
+        "适用范围",
+        "使用场景"
+      ],
+      "check": "记录建筑用途、使用者和练习目标。"
+    },
+    {
+      "article": "D-02",
+      "topic": "访客通行路线记录",
+      "keywords": [
+        "无障碍",
+        "通行路线",
+        "访客路径"
+      ],
+      "check": "记录入口、到达路径和使用者需求。"
+    },
+    {
+      "article": "D-03",
+      "topic": "屋面形式信息收集",
+      "keywords": [
+        "建筑高度",
+        "屋面形式",
+        "室外地坪"
+      ],
+      "check": "记录屋面形式和示意模型。",
+      "measure": "height"
+    },
+    {
+      "article": "D-04",
+      "topic": "屋顶设备空间记录",
+      "keywords": [
+        "屋顶设备用房",
+        "建筑高度",
+        "设备空间"
+      ],
+      "check": "记录设备位置和示意图。",
+      "measure": "height"
+    },
+    {
+      "article": "D-05",
+      "topic": "公共空间净高信息记录",
+      "keywords": [
+        "室内净高",
+        "净空高度",
+        "公共走道"
+      ],
+      "check": "记录房间用途和测量位置。",
+      "measure": "height"
+    },
+    {
+      "article": "D-06",
+      "topic": "车辆抵达路线记录",
+      "keywords": [
+        "机动车出入口",
+        "学校",
+        "周边道路"
+      ],
+      "check": "记录出入口、周边道路和人车动线。"
+    },
+    {
+      "article": "D-07",
+      "topic": "建筑入口信息记录",
+      "keywords": [
+        "建筑出入口",
+        "入口位置",
+        "场地条件"
+      ],
+      "check": "记录入口位置、使用人群和场地条件。"
+    },
+    {
+      "article": "D-08",
+      "topic": "入口台阶信息记录",
+      "keywords": [
+        "主入口",
+        "室外台阶",
+        "踏步宽高"
+      ],
+      "check": "记录台阶位置、图纸编号和使用场景。",
+      "measure": "width"
+    },
+    {
+      "article": "D-09",
+      "topic": "公共楼梯使用场景记录",
+      "keywords": [
+        "公共楼梯",
+        "楼梯净宽",
+        "日常交通"
+      ],
+      "check": "记录楼梯用途和服务空间。",
+      "measure": "width"
+    },
+    {
+      "article": "D-10",
+      "topic": "楼梯平台布置记录",
+      "keywords": [
+        "楼梯休息平台",
+        "平台宽度",
+        "梯段"
+      ],
+      "check": "记录梯段和平台的示意布置。",
+      "measure": "width"
+    },
+    {
+      "article": "D-11",
+      "topic": "办公楼公共走廊信息记录",
+      "keywords": [
+        "办公楼",
+        "公共走廊",
+        "走道净宽"
+      ],
+      "check": "记录走廊服务空间和图纸位置。",
+      "building_use": "non_residential",
+      "measure": "width"
+    },
+    {
+      "article": "D-12",
+      "topic": "公共卫生间布置记录",
+      "keywords": [
+        "公共厕所",
+        "卫生间通道",
+        "隔间"
+      ],
+      "check": "记录隔间、通道和使用者动线。",
+      "measure": "width"
+    },
+    {
+      "article": "D-13",
+      "topic": "屋面排水资料收集",
+      "keywords": [
+        "屋面坡度",
+        "屋面排水",
+        "屋面做法"
+      ],
+      "check": "记录屋面做法和排水示意。",
+      "measure": "slope"
+    },
+    {
+      "article": "D-14",
+      "topic": "临空窗台方案记录",
+      "keywords": [
+        "临空窗",
+        "窗台高度",
+        "防护方案"
+      ],
+      "check": "记录窗台位置和防护方案示意。",
+      "building_use": "non_residential",
+      "measure": "height"
+    }
+  ]
+}
